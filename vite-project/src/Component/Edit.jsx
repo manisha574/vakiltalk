@@ -33,9 +33,9 @@ export default function Edit() {
   useEffect(() => {
     const fetchCustomerDetails = async () => {
       try {
-        const response = await axios.get(`https://prodapi.astroapp.live:8082/astrologyapp/api/v1/customers/get-customer-detail?customerId=${otpData.data.id}`, {
+        const response = await axios.get(`https://////?customerId=${otpData.data.id}`, {
           headers: {
-            'Authorization': `Bearer ${otpData.data.authToken}`,
+            'Authorization': `Bearer `,
             'Content-Type': 'application/json',
             'Id': otpData.data.id,
           },
@@ -84,7 +84,7 @@ export default function Edit() {
 
     try {
       const response = await axios.post(
-        'https://prodapi.astroapp.live:8082/astrologyapp/image/upload',
+        'https:// *********',
         formData,
         {
           headers: {
