@@ -25,7 +25,7 @@ const Fetchlawyer = ({ showdesign }) => {
     useEffect(() => {
         const fetchLawyers = async () => {
             try {
-                const response = await fetch('https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/get/all/active/astrologers?pageNo=0&pageSize=12&platformType=WEBSITE&moduleName=CALL&projectId=5&sortBy=false&filterType=1&timeZone=Asia/Calcutta&searchQuery=');
+                const response = await fetch('https://?pageNo=0&pageSize=12&platformType=WEBSITE&moduleName=CALL&projectId=5&sortBy=false&filterType=1&timeZone=Asia/Calcutta&searchQuery=');
                 const data = await response.json();
                 setLawyers(data.data);
                 console.log('lawyers',lawyers);
@@ -117,7 +117,7 @@ const Fetchlawyer = ({ showdesign }) => {
 
     const handleSubH2Click = async (lawyer) => {
         try {
-            const response = await fetch(`https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/astrologer-detail-get?timeZone=Asia/Calcutta&profileUrl=${lawyer.profileUrl}&projectId=5`);
+            const response = await fetch(`https://///?timeZone=Asia/Calcutta&profileUrl=${lawyer.profileUrl}&projectId=5`);
             const data = await response.json();
             console.log("astrologer", data);
 
