@@ -12,7 +12,7 @@ export const ApiProvider = ({ children }) => {
 
   const fetchWalletData = async () => {
     try {
-      const response = await axios.get('https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/get/wallet/transaction', {
+      const response = await axios.get('https://testapi...............', {
         params: {
           pageNo: 0, // Example page number, adjust as needed
           customerId: otpData.data.id,
