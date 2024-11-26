@@ -34,10 +34,10 @@ const ChatInterface = () => {
         );
 
         const historyResponse = await axios.get(
-          `https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/get-chat-messaging-history?customerId=${otpData.data.id}&orderId=${chatorderId}&pageNo=0&pageSize=500`,
+          `https://.......?customerId=${otpData.data.id}&orderId=${chatorderId}&pageNo=0&pageSize=500`,
           {
             headers: {
-              Authorization: `Bearer ${otpData.data.authToken}`,
+              Authorization: `Bearer `,
               'Content-Type': 'application/json',
               Id: otpData.data.id,
             }
@@ -66,7 +66,7 @@ const ChatInterface = () => {
   }, [chatAccepted, otpData, chatorderId, formresponse, again]);
 
   const startWebSocket = () => {
-    const socket = new SockJS(`https://testapi.astroapp.live:8082/astrologyapp/testchat?UserId=${otpData.data.id}&socketToken=Bearer ${otpData.data.authToken}`);
+    const socket = new SockJS(`https://testapi......?UserId=${otpData.data.id}&socketToken=Bearer ${otpData.data.authToken}`);
     const stompClient = Stomp.over(socket);
 
     stompClient.connect({}, (frame) => {
@@ -138,11 +138,11 @@ const ChatInterface = () => {
 
     try {
       const response = await axios.post(
-        `https://testapi.astroapp.live:8082/astrologyapp/api/v1/stop/chat/order/completed?chatOrderId=${chatorderId}`, // Add chatOrderId as a query parameter
+        `https://testapi.........?chatOrderId=${chatorderId}`, // Add chatOrderId as a query parameter
         {},
         {
           headers: {
-            Authorization: `Bearer ${otpData?.data?.authToken}`,
+            Authorization: `Bearer ***`,
             'Content-Type': 'application/json',
             Id: otpData?.data?.id,
           },
@@ -152,10 +152,10 @@ const ChatInterface = () => {
       if (response.data.status === "success") {
         try {
           const transactionResponse = await axios.get(
-            `https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/get/wallet/transaction?customerId=${otpData.data.id}&pageNo=0&pageSize=0`,
+            `https://testapi.........?customerId=${otpData.data.id}&pageNo=0&pageSize=0`,
             {
               headers: {
-                Authorization: `Bearer ${otpData?.data?.authToken}`,
+                Authorization: `Bearer ****`,
                 'Content-Type': 'application/json',
                 Id: otpData?.data?.id,
               },
