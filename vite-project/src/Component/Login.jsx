@@ -131,7 +131,7 @@ export default function Login({ onClose }) {
     const encodedContactno = encodeURIComponent(signUpData.contactno);
     const encodedTimeZone = encodeURIComponent(timeZone);
 
-    const url = `https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/login/customer/by/mobile?customerMobile=${encodedContactno}&countryCode=${encodedCountryCode}&platformType=WEBSITE&projectId=3&timeZone=${encodedTimeZone}`;
+    const url = `https://testapi.?customerMobile=${encodedContactno}&countryCode=${encodedCountryCode}&platformType=WEBSITE&projectId=3&timeZone=${encodedTimeZone}`;
 
     axios.post(url, {}, { headers: { 'Content-Type': 'application/json' } })
       .then((response) => {
@@ -167,7 +167,7 @@ console.log('Time Zone:', timeZone);
     const encodedOtp = encodeURIComponent(otp);
     const encodedUserId = encodeURIComponent(id_1);
 
-    const url = `https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/verify-otp-to-verif-mobile?userId=${encodedUserId}&otp=${encodedOtp}`;
+    const url = `https://?userId=${encodedUserId}&otp=${encodedOtp}`;
     axios.post(url, {},
       { headers: { 'Content-Type': 'application/json' } })
       .then((response) => {
