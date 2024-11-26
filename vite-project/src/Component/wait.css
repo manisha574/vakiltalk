@@ -1,0 +1,75 @@
+.wait-enter {
+  transform: translateY(100%); /* Start from below the screen */
+}
+
+.wait-enter-active {
+  transform: translateY(0); /* Move to visible position */
+  transition: transform 300ms ease-out;
+}
+
+.wait-exit {
+  transform: translateY(0); /* Start at visible position */
+}
+
+.wait-exit-active {
+  transform: translateY(-100%); /* Slide back out of the screen */
+  transition: transform 300ms ease-out;
+}
+
+  /* header.css */
+.shadow-custom-top {
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+  
+ 
+  
+  /* Additional styles */
+  
+  
+  .wait {
+   
+    background-size: cover; /* Ensure background image covers the whole component */
+    
+    box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.1);
+   
+    z-index: 1001; /* Ensure it is above the overlay */
+  }
+  
+
+.hr-custom {
+  border: 0;
+  height: 3px; /* Thickness of the line */
+  background: linear-gradient(to right, #8887b3, #463acc); /* Gradient color */
+  margin: 0; /* Remove default margins */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+/* wait.css */
+
+@keyframes ring {
+  0% { transform: translateX(-5px); }
+  25% { transform: translateX(5px); }
+  50% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(-5px); }
+}
+
+.ring {
+  animation: ring 0.3s ease-in-out infinite;
+}
+
+.bg-green-500 {
+  background-color: #48bb78; /* Tailwind's default green-500 */
+}
+
+.bg-green-500:hover {
+  background-color: #34d399; /* Tailwind's default green-400 or any color you choose */
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}

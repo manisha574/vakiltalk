@@ -1,0 +1,35 @@
+/* styles.css */
+.custom-toast {
+  border: 2px solid red; /* Red border */
+  border-radius: 5px; 
+  box-shadow: 5px 5px 2px rgb(251, 75, 75);/* Optional: rounded corners */
+ 
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:'black'
+}
+/* Ensure items in the grid do not break into new rows */
+/* styles.css */
+.clock-overlay {
+  position: fixed; /* Position fixed to stay centered */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centering */
+  z-index: 1300; /* Ensure it's on top */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  opacity: 0; /* Default hidden state */
+  visibility: hidden; /* Default hidden state */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Transition effects */
+}
+
+.clock-overlay.open {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Make visible */
+}
+
+.clock-overlay.closed {
+  opacity: 0; /* Hidden */
+  visibility: hidden; /* Hide visibility */
+}

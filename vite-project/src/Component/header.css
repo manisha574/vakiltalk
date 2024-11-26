@@ -1,0 +1,85 @@
+/* Overlay styles */
+.overlay-enter {
+    opacity: 0;
+  }
+  .overlay-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+  }
+  .overlay-exit {
+    opacity: 1;
+  }
+  .overlay-exit-active {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+  /* header.css */
+.shadow-custom-top {
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+  
+  /* Login slide styles */
+  .login-slide-enter {
+    transform: translateX(100%);
+  }
+  .login-slide-enter-active {
+    transform: translateX(0);
+    transition: transform 300ms ease-in-out;
+  }
+  .login-slide-exit {
+    transform: translateX(0);
+  }
+  .login-slide-exit-active {
+    transform: translateX(-100%);
+    transition: transform 300s ease-in-out 1s;
+    
+
+  }
+  
+  /* Additional styles */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Black with 50% opacity */
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end; /* Align Login component to the right */
+  }
+  
+  .login-slide {
+    width: 400px; /* Adjust width as needed */
+    background-size: cover; /* Ensure background image covers the whole component */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    height: 100%;
+    box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1001; /* Ensure it is above the overlay */
+  }
+  /* header.css */
+
+.hr-custom {
+  border: 0;
+  height: 3px; /* Thickness of the line */
+  background: linear-gradient(to right, #8887b3, #463acc); /* Gradient color */
+  margin: 0; /* Remove default margins */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+.overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Black with 50% opacity */
+    z-index: 1000;
+    display: flex ;
+    flex-direction: column;
+    justify-content: flex-end; /* Align Login component to the right */
+  }
