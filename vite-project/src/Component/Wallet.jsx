@@ -87,7 +87,7 @@ export default function Wallet() {
       discount: 0,
     };
   
-    const url = new URL('https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/wallet/recharge/start');
+    const url = new URL('https://');
     const params = {
       customerId: formData.userId,
       rechargeAmount: formData.amount,
@@ -106,7 +106,7 @@ export default function Wallet() {
       const response = await axios.post(url, {}, {
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${otpData.data.authToken}`,
+          'Authorization': `Bearer`,
           'Id': formData.userId,
         }
       });
@@ -138,14 +138,14 @@ export default function Wallet() {
             const paymentGatewayTxID = response.razorpay_order_id;
             console.log('Transaction ID:', txID);
             console.log('Order ID:', paymentGatewayTxID);
-            axios.post(`https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/wallet/recharge/success?paymentId=${paymentIdFromResponse}&paymentStatus=COMPLETED&razorPayTransactionId=${txID}`, {
+            axios.post(`https://?paymentId=${paymentIdFromResponse}&paymentStatus=COMPLETED&razorPayTransactionId=${txID}`, {
               paymentId:  paymentIdFromResponse ,
                  paymentStatus: 'COMPLETED',
               razorPayTransactionId:txID ,
               
             }, {
               headers: {
-                'Authorization': `Bearer ${otpData.data.authToken}`,
+                'Authorization': `Bearer `,
                 'Content-Type': 'application/json',
                 'Id': formData.userId,
               }
