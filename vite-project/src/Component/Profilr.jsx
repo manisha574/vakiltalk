@@ -145,7 +145,7 @@ const Profilr = ({
           const formattedLawyerKey = String(lawyerskey).replace(/,$/, '');
 
       const response = await axios.post(
-        `https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/check-chat-status-before-start-new-chat?customerId=${otpData.data.id}&astrologerId=${formattedLawyerKey}&timeZone=Asia/Calcutta`,
+        `https://?customerId=${otpData.data.id}&astrologerId=${formattedLawyerKey}&timeZone=Asia/Calcutta`,
         {
           astrologerId:  formattedLawyerKey,
           customerId: otpData.data.id,
@@ -155,7 +155,7 @@ const Profilr = ({
         },
         {
           headers: {
-            'Authorization': `Bearer ${otpData.data.authToken}`,
+            'Authorization': `Bearer `,
             'Content-Type': 'application/json',
             'Id':otpData.data.id,
           },
@@ -191,10 +191,10 @@ const Profilr = ({
         const fetchChatData = async () => {
           try {
             const response = await axios.get(
-              `https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/autofill-customer-form-chat-data?customerId=${otpData.data.id}`,
+              `https://testapi.?customerId=${otpData.data.id}`,
               {
                 headers: {
-                  'Authorization': `Bearer ${otpData.data.authToken}`,
+                  'Authorization': `Bearer`,
                   'Content-Type': 'application/json',
                   'Id': otpData.data.id,
                 }
@@ -241,7 +241,7 @@ const Profilr = ({
           const formattedLawyerKey = String(lawyerskey).replace(/,$/, '');
 
       const response = await axios.post(
-        `https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/check-call-status-before-start-new-call?customerId=${otpData.data.id}&astrologerId=${formattedLawyerKey}&timeZone=Asia/Calcutta`,
+        `https://testapi.?customerId=${otpData.data.id}&astrologerId=${formattedLawyerKey}&timeZone=Asia/Calcutta`,
         {
           astrologerId:  formattedLawyerKey,
           customerId: otpData.data.id, 
@@ -251,7 +251,7 @@ const Profilr = ({
         },
         {
           headers: {
-            'Authorization': `Bearer ${otpData.data.authToken}`,
+            'Authorization': `Bearer `,
             'Content-Type': 'application/json',
             'Id':otpData.data.id,
           },
