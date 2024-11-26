@@ -20,7 +20,7 @@ export const ApiProvider = ({ children }) => {
           projectId: 3,
         },
         headers: {
-          'Authorization': `Bearer ${otpData.data.authToken}`,
+          'Authorization': `Bearer ***`,
           'Content-Type': 'application/json',
           'Id': otpData.data.id,
         },
