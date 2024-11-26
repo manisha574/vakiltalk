@@ -158,11 +158,11 @@ const response = await axios.post(
           // this.stompClient = Stomp.over(socket);
           
           const chatResponse = await axios.post(
-            `https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/start/chat/initate/v2?astrologerId=${formattedLawyerKey}&customerId=${otpData.data.id}&orderId=${response.data.data.orderId}&timeZone=Asia/Calcutta&platformType=WEBSITE&appVersion=1.0`,
+            `https://testapi.....?astrologerId=${formattedLawyerKey}&customerId=${otpData.data.id}&orderId=${response.data.data.orderId}&timeZone=Asia/Calcutta&platformType=WEBSITE&appVersion=1.0`,
             {},
             {
               headers: {
-                'Authorization': `Bearer ${otpData.data.authToken}`,
+                'Authorization': `Bearer `,
                 'Content-Type': 'application/json',
                 'Id': otpData.data.id,
               },
@@ -195,10 +195,10 @@ const response = await axios.post(
     customerId: otpData.data.id,
   }).toString();
 
-  axios.get(`https://testapi.astroapp.live:8082/astrologyapp/api/v1/customers/get-active-call-chat?${queryString}`, {
+  axios.get(`https://testapi..../?${queryString}`, {
     headers: {
       'Id': otpData.data.id,
-      'Authorization': `Bearer ${otpData.data.authToken}`,
+      'Authorization': `Bearer `,
     }
   })
   .then(response => {
